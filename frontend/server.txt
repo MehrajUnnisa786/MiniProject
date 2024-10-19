@@ -1,0 +1,24 @@
+const params = new URLSearchParams({
+    'g-recaptcha-response' : 'xyz',
+    name : "Spam user",
+    message : "spam spam spam"
+});
+
+fetch('http://httpbin.org/post', {
+        method: "POST",
+        body: params,
+})
+
+.then(res => res.json())
+.then(data => {
+    if (data.captchaSuccess)
+        console.log("Validation Successful");
+    else
+        console.error("Validation Failed");
+    })
+.catch(err => console.error(err))
+
+
+//.then(res => res.json())
+//.then(data => console.log(data))
+//.catch(err => console.error(err))

@@ -9,7 +9,6 @@ app.use(express.urlencoded({ extended: false }));
 app.post('/upload', function(req, res) {
 
     const params = new URLSearchParams({
-        //secret: '6LcT3TsqAAAAACdDnFnu559mwaiPAvol_iq2RF_Y',
         secret: '6LcR3TsqAAAAAD2cdv5JjWta4XH1HutxPptd1pD2',
         response: req.body['g-recaptcha-response'],
         remoteip: req.ip,

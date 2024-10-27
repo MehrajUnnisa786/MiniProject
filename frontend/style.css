@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full viewport height */
+    margin: 0;
+    /* Remove default margin */
+    font-family: Arial, sans-serif;
+    /* Font style */
+}
+
+form {
+    background-color: #f9f9f9;
+    /* Light background for the form */
+    padding: 20px;
+    /* Space inside the form */
+    border-radius: 5px;
+    /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+label {
+    display: block;
+    /* Make labels block-level for proper alignment */
+    margin-bottom: 5px;
+    /* Space between label and input */
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    /* Full width for inputs */
+    padding: 10px;
+    /* Space inside inputs */
+    margin-bottom: 15px;
+    /* Space below inputs */
+    border: 1px solid #ccc;
+    /* Border color */
+    border-radius: 4px;
+    /* Rounded edges */
+}
+
+button {
+    background-color: #007bff;
+    /* Button color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* Remove default border */
+    padding: 10px 15px;
+    /* Space inside button */
+    border-radius: 4px;
+    /* Rounded edges */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #0056b3;
+    /* Darker button color on hover */
+}

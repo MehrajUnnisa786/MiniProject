@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page</title>
+</head>
+<body style="background-color: lightblue;">
+   <h1 style="text-align: center;">WELCOME</h1> 
+   <div id="display"></div>
+
+   <script>
+       // Function to get query parameters from the URL
+       function getQueryParams() {
+           const params = {};
+           const queryString = window.location.search.substring(1);
+           const pairs = queryString.split('&');
+
+           for (let pair of pairs) {
+               const [key, value] = pair.split('=');
+               params[decodeURIComponent(key)] = decodeURIComponent(value.replace(/\+/g, ' '));
+           }
+           return params;
+       }
+
+       const params = getQueryParams();
+       const displayDiv = document.getElementById('display');
+       
+       // Display the name and message
+       if (params.name && params.message) {
+           displayDiv.innerHTML = `<p>Name: ${params.name}</p><p>Message: ${params.message}</p>`;
+       }
+   </script>
+</body>
+</html>
